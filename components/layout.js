@@ -3,21 +3,17 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import Aboutme from "../pages/aboutme";
-import Blogindex from "../pages/posts/blog-index";
 
 const name = "Blog";
-export const siteTitle = "Blog siteTitle";
+export const siteTitle = "Omers Blog";
 
-export default function Layout({ children, home, Aboutme, Blogindex }) {
+export default function Layout({ children, home, Blogindex }) {
   return (
     <div className={styles.container}>
       <Head>
+        <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="Omers blog made using Next.js" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -25,7 +21,12 @@ export default function Layout({ children, home, Aboutme, Blogindex }) {
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
+        <meta
+          property="og:description"
+          content="Omers Blog made using Next.js"
+        />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="robots" content="all" />
       </Head>
       <header className={styles.header}>
         {home ? (

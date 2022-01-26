@@ -5,9 +5,6 @@ import utilStyles from "../styles/utils.module.css";
 export default function Aboutme() {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
